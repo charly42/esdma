@@ -797,8 +797,13 @@ textarea.w-input, textarea.w-select {
 @media screen and (max-width: 991px) {
   .w-container {
     max-width: 728px;
-    }
   }
+  
+  @media (max-width: 767px) {
+  .grid-layout img {
+    display: none !important;
+  }
+}
 
   .w-hidden-main {
     display: inherit !important;
@@ -861,6 +866,7 @@ textarea.w-input, textarea.w-select {
     left: auto;
     right: auto;
   }
+}
 
 @media screen and (max-width: 767px) {
   .w-hidden-main, .w-hidden-medium {
@@ -19301,6 +19307,7 @@ html {
   @media screen and (max-width: 991px) {
     .w-container {
       max-width: 728px;
+
     }
   
     .w-hidden-main {
