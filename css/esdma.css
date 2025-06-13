@@ -798,6 +798,12 @@ textarea.w-input, textarea.w-select {
   .w-container {
     max-width: 728px;
   }
+  
+  @media (max-width: 767px) {
+  .grid-layout img {
+    display: none !important;
+  }
+}
 
   .w-hidden-main {
     display: inherit !important;
