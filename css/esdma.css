@@ -794,17 +794,17 @@ textarea.w-input, textarea.w-select {
   display: none !important;
 }
 
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .w-container {
     max-width: 728px;
   }
   
-  @media (max-width: 767px) {
-  .grid-layout img {
-    display: none !important;
-  }
-}
-
   .w-hidden-main {
     display: inherit !important;
   }
@@ -19307,7 +19307,6 @@ html {
   @media screen and (max-width: 991px) {
     .w-container {
       max-width: 728px;
-
     }
   
     .w-hidden-main {
