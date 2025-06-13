@@ -262,6 +262,12 @@ html.w-mod-touch * {
   display: none;
 }
 
+.desktop-4-column {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; /* adapte selon ton design */
+}
+
 .w-button {
   color: #fff;
   line-height: inherit;
