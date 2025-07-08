@@ -7250,7 +7250,37 @@ html {
     inset: auto 12px 12px auto !important;
     transform: none !important;
   }
+
+.translate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
   
+  
+  .google_translate_element select {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
   .w-webflow-badge > img {
     position: unset;
     visibility: hidden !important;
