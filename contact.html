@@ -366,6 +366,8 @@
                             <label for="contenu" class="form-label">Message</label>
                             <textarea id="contenu" name="contenu" class="form-input w-input" rows="5" required></textarea>
                         </div>
+                         <div class="g-recaptcha" data-sitekey="6LdyUn0rAAAAACdV5LKXoy7LlU_Xtz4Dvc1xCr1v"></div>
+                         <br>
                             <button type="submit" class="button w-button">Envoyer</button>
                     </form>
                     <div id="notification" class="notification" style="position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:none;background:#333;color:#fff;padding:16px 32px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:1.1rem;"></div>
@@ -686,38 +688,50 @@
         ></script>
     <script src="https://cdn.prod.website-files.com/6821ef9225dacd4198c6f146/js/webflow.f69202d6.dbd27965e439cd2b.js"
         ></script>
-    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-     // Initialiser EmailJS avec ton User ID
-    emailjs.init("3N02RJhmLlaqcJ9I7");
+        emailjs.init("nu-18o-fwSKkoLaPT"); // Ta Public Key
 
-    // Écoute la soumission du formulaire
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-     event.preventDefault();  // bloque la soumission classique
-        // Afficher une notification de chargement
-          emailjs.sendForm("service_eyjk8ma", "template_neo1tx3", this)
-      .then(function() {
-        const notif = document.getElementById("notification");
-        notif.innerText = "Message envoyé avec succès !";
-        notif.style.display = "block";
-        setTimeout(() => notif.style.display = "none", 5000);
-        document.getElementById("contactForm").reset();
-      })
-      .catch(function(error) {
-        const notif = document.getElementById("notification");
-        notif.innerText = "Erreur lors de l'envoi : " + error.text;
-        notif.style.display = "block";
-        setTimeout(() => notif.style.display = "none", 5000);
-      });
-  });
+        const form = document.getElementById("contactForm");
+        const notification = document.getElementById("notification");
 
-    function showNotification(message) {
+        form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_eyjk8ma", "template_neo1tx3", this)
+        .then(() => {
+            showNotification("Message envoyé avec succès !");
+            this.reset();
+        })
+        .catch(error => {
+            showNotification("Erreur lors de l’envoi : " + (error.text || error));
+            console.error("EmailJS error:", error);
+        });
+        });
+    </script>
+    
+    <script>
+        function showNotification(message) {
         const notif = document.getElementById("notification");
-        notif.innerText = message;
+        notif.textContent = message;
         notif.style.display = "block";
-        setTimeout(() => notif.style.display = "none", 5000);
+
+        setTimeout(() => {
+            notif.style.display = "none";
+        }, 5000);
     }
     </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBYXK9F0FT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBYXK9F0FT');
+</script>
 </body>
 
 </html>
