@@ -343,7 +343,7 @@
                     <h2 class="eyebrow">Nous contacter</h2>
                     <h2 class="h2-heading">Envoyez nous un message !</h2>
                     <p class="subheading"></p>
-                    <form action="send_mail.php" method="post" class="contact-form w-form" id="contactForm">
+                    <form class="contact-form w-form" id="contactForm">
                         <div class="w-layout-grid grid-layout desktop-2-column mobile-portrait-1-column grid-gap-sm">
                             <div>
                                 <label for="nom" class="form-label">Nom</label>
@@ -666,30 +666,6 @@
             }, 3000);
         }
     </script> -->
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = new FormData(form);
-            fetch(form.action, {
-                method: "POST",
-                body: data
-            })
-            .then(response => response.text())
-            .then(msg => {
-                showNotification(msg);
-                form.reset();
-            })
-            .catch(error => showNotification("Une erreur s'est produite. Veuillez réessayer."));
-        });
-
-        function showNotification(message) {
-            const notif = document.getElementById("notification");
-            notif.textContent = message;
-            notif.style.display = "block";
-            setTimeout(() => notif.style.display = "none", 4000);
-        }
-        </script>
 
     <script src="./js/script1.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./js/script2.js"></script>
@@ -710,6 +686,38 @@
         ></script>
     <script src="https://cdn.prod.website-files.com/6821ef9225dacd4198c6f146/js/webflow.f69202d6.dbd27965e439cd2b.js"
         ></script>
+    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+    <script>
+     // Initialiser EmailJS avec ton User ID
+    emailjs.init("3N02RJhmLlaqcJ9I7");
+
+    // Écoute la soumission du formulaire
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+     event.preventDefault();  // bloque la soumission classique
+        // Afficher une notification de chargement
+          emailjs.sendForm("service_eyjk8ma", "template_neo1tx3", this)
+      .then(function() {
+        const notif = document.getElementById("notification");
+        notif.innerText = "Message envoyé avec succès !";
+        notif.style.display = "block";
+        setTimeout(() => notif.style.display = "none", 5000);
+        document.getElementById("contactForm").reset();
+      })
+      .catch(function(error) {
+        const notif = document.getElementById("notification");
+        notif.innerText = "Erreur lors de l'envoi : " + error.text;
+        notif.style.display = "block";
+        setTimeout(() => notif.style.display = "none", 5000);
+      });
+  });
+
+    function showNotification(message) {
+        const notif = document.getElementById("notification");
+        notif.innerText = message;
+        notif.style.display = "block";
+        setTimeout(() => notif.style.display = "none", 5000);
+    }
+    </script>
 </body>
 
 </html>
