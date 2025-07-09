@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://charly42.github.io/esdma/sitemap.xml
