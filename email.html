@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulaire de contact ESDMA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    .form-label { display: block; margin-bottom: 4px; font-weight: bold; }
+    .form-input { width: 100%; padding: 8px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px; }
+    .button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .button:hover { background-color: #0056b3; }
+    #notification { margin-top: 20px; font-weight: bold; display: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Contactez-nous</h1>
+
+  <form id="contactForm">
+    <label for="nom" class="form-label">Nom</label>
+    <input type="text" id="nom" name="nom" class="form-input" required />
+
+    <label for="prenom" class="form-label">Prénom</label>
+    <input type="text" id="prenom" name="prenom" class="form-input" required />
+
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" name="email" class="form-input" required />
+
+    <label for="objet" class="form-label">Objet</label>
+    <input type="text" id="objet" name="objet" class="form-input" required />
+
+    <label for="contenu" class="form-label">Message</label>
+    <textarea id="contenu" name="contenu" class="form-input" rows="5" required></textarea>
+
+    <button type="submit" class="button">Envoyer</button>
+  </form>
+
+  <div id="notification"></div>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("nu-18o-fwSKkoLaPT"); // Ta Public Key
+
+    const form = document.getElementById("contactForm");
+    const notification = document.getElementById("notification");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_eyjk8ma", "template_neo1tx3", this)
+        .then(() => {
+          notification.style.color = "green";
+          notification.style.display = "block";
+          notification.textContent = "Message envoyé avec succès !";
+          form.reset();
+        })
+        .catch(error => {
+          notification.style.color = "red";
+          notification.style.display = "block";
+          notification.textContent = "Erreur lors de l’envoi : " + (error.text || error);
+          console.error("EmailJS error:", error);
+        });
+    });
+  </script>
+
+</body>
+</html>
