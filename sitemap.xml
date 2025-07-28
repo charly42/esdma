@@ -1,60 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>https://charly42.github.io/esdma/a-propos.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/index.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/arts-numeriques.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/mediation-culturelle.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/tourisme-culturel.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/contact.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/politique-de-confidentialite.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/mentions-legales.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/cgv.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://charly42.github.io/esdma/cgu.html</loc>
-  <lastmod>2025-07-04T07:41:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://www.esdma.fr/index.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
 
+  <url>
+    <loc>https://www.esdma.fr/a-propos.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/contact.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/entreprises.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+
+  <!-- Formations -->
+  <url>
+    <loc>https://www.esdma.fr/bts-concepteur-designer.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/bachelor-tourisme-culturel.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/bachelor-concepteur-developpeur.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/mastere-direction-artistique.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/mastere-entrepreneuriat.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Pages légales -->
+  <url>
+    <loc>https://www.esdma.fr/politique-de-confidentialite.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/mentions-legales.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/cgv.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esdma.fr/cgu.html</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+    <priority>0.50</priority>
+  </url>
 
 </urlset>
